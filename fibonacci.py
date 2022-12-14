@@ -7,4 +7,10 @@ def Fibonacci(n):
         return 1
     else:
         return Fibonacci(n-1) + Fibonacci(n-2)
-print(Fibonacci(9))
+user_input = input('Enter a number for the fibonacci series: ')
+try:
+    n_as_int = int(user_input)
+except:
+    print('You did not enter an integer')
+
+print(Fibonacci(n_as_int))
