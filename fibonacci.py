@@ -1,3 +1,6 @@
+import fibonacci_memoization
+import fibonacci_dynamic
+
 def Fibonacci(n):
     if n < 0:
         print('Incorrect input')
@@ -7,12 +10,13 @@ def Fibonacci(n):
         return 1
     else:
         return Fibonacci(n-1) + Fibonacci(n-2)
+
 success = False
 while not success:
     user_input = input('Enter a number for the fibonacci series: ')
     try:
         n_as_int = int(user_input)
-        print(Fibonacci(n_as_int))
+        print(fibonacci_dynamic.Fibonacci(n_as_int))
         success = True
-    except:
+    except ValueError:
         print('You did not enter an integer')

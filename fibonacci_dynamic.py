@@ -1,19 +1,15 @@
-FibArray = [0, 1]
- 
-def fibonacci(n):
-   
-    # Check is n is less
-    # than 0
+def Fibonacci(n):
     if n < 0:
-        print("Incorrect input")
-         
-    # Check is n is less
-    # than len(FibArray)
-    elif n < len(FibArray):
-        return FibArray[n]
-    else:       
-        FibArray.append(fibonacci(n - 1) + fibonacci(n - 2))
-        return FibArray[n]
- 
-# Driver Program
-print(fibonacci(9))
+        print('Incorrect input')
+    elif n == 0:
+        return 0
+    else: 
+        a = 0
+        b = 1
+        for i in range(2, n+1):
+            c = a+b
+            a = b
+            b = c
+        return c
+
+
